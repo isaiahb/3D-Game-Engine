@@ -1,0 +1,10 @@
+C:\Users\isaiah\Source\Repos\BlobGame\Application\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\isaiah\Source\Repos\BlobGame\Application\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\isaiah\Source\Repos\BlobGame\Application\obj\Debug\Blob Game.csprojResolveAssemblyReference.cache
+C:\Users\isaiah\Source\Repos\BlobGame\Application\obj\Debug\WicGames.GameEngine.Main.Window.resources
+C:\Users\isaiah\Source\Repos\BlobGame\Application\obj\Debug\WicGames.Properties.Resources.resources
+C:\Users\isaiah\Source\Repos\BlobGame\Application\obj\Debug\Blob Game.csproj.GenerateResource.Cache
+C:\Users\isaiah\Source\Repos\BlobGame\Application\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\isaiah\Source\Repos\BlobGame\Application\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\isaiah\Source\Repos\3D-Game-Engine\Application\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\isaiah\Source\Repos\3D-Game-Engine\Application\obj\Debug\WindowsFormsApplication1.pdb

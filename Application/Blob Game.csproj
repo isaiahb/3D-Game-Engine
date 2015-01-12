@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4F69BF71-170E-4EF8-B949-DD6F1C4E9D69}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WicGames</RootNamespace>
+    <AssemblyName>WindowsFormsApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameEngine\Entities\Blob.cs" />
+    <Compile Include="GameEngine\Entities\Entity.cs" />
+    <Compile Include="GameEngine\Entities\Food.cs" />
+    <Compile Include="GameEngine\Entities\ToxicFood.cs" />
+    <Compile Include="GameEngine\Main\Game.cs" />
+    <Compile Include="GameEngine\Main\Scene.cs" />
+    <Compile Include="GameEngine\Main\Window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameEngine\Input\Key.cs" />
+    <Compile Include="GameEngine\Input\Mouse.cs" />
+    <Compile Include="GameEngine\Physics\Body.cs" />
+    <Compile Include="GameEngine\Physics\Collision\Detection.cs" />
+    <Compile Include="GameEngine\Physics\Collision\Manifold.cs" />
+    <Compile Include="GameEngine\Physics\Collision\Resolution.cs" />
+    <Compile Include="GameEngine\Physics\Constraints\Constraint.cs" />
+    <Compile Include="GameEngine\Physics\Forces\Force.cs" />
+    <Compile Include="GameEngine\Physics\Material.cs" />
+    <Compile Include="GameEngine\Physics\Particle.cs" />
+    <Compile Include="GameEngine\Physics\Physics.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WICLibrary\Drawable.cs" />
+    <Compile Include="WICLibrary\Event.cs" />
+    <Compile Include="WICLibrary\Graphics2D.cs" />
+    <Compile Include="WICLibrary\Matrix.cs" />
+    <Compile Include="WICLibrary\SpriteSheet.cs" />
+    <Compile Include="WICLibrary\Vector2.cs" />
+    <Compile Include="WICLibrary\IVector2.cs" />
+    <Compile Include="WICLibrary\Vector3.cs" />
+    <Compile Include="WICLibrary\Wic.cs" />
+    <EmbeddedResource Include="GameEngine\Main\Window.resx">
+      <DependentUpon>Window.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GameEngine\Assets\Sounds\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GameEngine\Assets\Images\Image1.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
