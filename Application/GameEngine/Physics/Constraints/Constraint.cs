@@ -11,7 +11,7 @@ namespace WicGames.GameEngine.Physics.Constraints
     {
         public abstract void update();
         public abstract void draw(Graphics2D graphics2D);
-        public Body a, b;
+        public Rectangle a, b;
         public double maxLength;
         public double currentLength() { return (a.center() - b.center()).magnitude(); }
         public bool vis = false;
@@ -21,7 +21,7 @@ namespace WicGames.GameEngine.Physics.Constraints
 			{
 
 			}
-            public Link(Body a, Body b, int length)
+            public Link(Rectangle a, Rectangle b, int length)
             {
                 this.a = a;
                 this.b = b;
@@ -49,7 +49,7 @@ namespace WicGames.GameEngine.Physics.Constraints
 			{
 
 			}
-            public Rod(Body a, Body b, double length)
+            public Rod(Rectangle a, Rectangle b, double length)
             {
                 this.a = a;
                 this.b = b;
@@ -91,7 +91,7 @@ namespace WicGames.GameEngine.Physics.Constraints
 		{
 			private Forces.Force springForce;
 			double springConstant;
-			public Spring(Body a, Body b, double length, double sCon)
+			public Spring(Rectangle a, Rectangle b, double length, double sCon)
 			{
 				this.a = a;
 				this.b = b;

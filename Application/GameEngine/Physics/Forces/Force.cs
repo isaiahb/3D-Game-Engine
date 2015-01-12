@@ -25,10 +25,10 @@ namespace WicGames.GameEngine.Physics.Forces
 			}
 		}
 		public Vector2 force;
-		public List<Body> bodies = new List<Body>();
-		public void add(Body body) { bodies.Add(body); }
-		public void remove(Body body) { bodies.Remove(body); }
-		public void updateForce(Body body)
+		public List<Rectangle> bodies = new List<Rectangle>();
+		public void add(Rectangle body) { bodies.Add(body); }
+		public void remove(Rectangle body) { bodies.Remove(body); }
+		public void updateForce(Rectangle body)
 		{
 			body.addForce(force);
 		}

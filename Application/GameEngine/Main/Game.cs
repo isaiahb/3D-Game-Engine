@@ -19,7 +19,7 @@ namespace WicGames.GameEngine.Main
 		public static Window window = new Window();
 		public static double fps = 60;
 		public static double time = 0;
-		public static Body particle = new Body(1,1,1,1);
+		public static Rectangle particle = new Rectangle(1,1,1,1);
         public static Force gravity = new Force(new Vector2(0, 20), (force, particle) => {
             particle.force += force * particle.mass;
         });

@@ -8,12 +8,12 @@ namespace WicGames.GameEngine.Physics.Collision
 {
 	class Manifold
 	{
-		public Body a, b;
+		public Rectangle a, b;
 		public Vector2 normal;
 		public double penetration, restitution;
 		public bool isConstraint = false;
 		// Constructor
-		public Manifold(Body a, Body b)
+		public Manifold(Rectangle a, Rectangle b)
 		{
 			this.a = a;
 			this.b = b;

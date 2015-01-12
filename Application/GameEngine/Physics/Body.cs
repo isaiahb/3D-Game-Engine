@@ -8,30 +8,30 @@ using WicGames.WICLibrary;
 
 namespace WicGames.GameEngine.Physics
 {
-	class Body:Particle
+	class Rectangle:Particle
 	{
 		public bool canCollide = true;
 
 		//Constructrs
-		public Body(int x, int y, int width, int height)
+		public Rectangle(int x, int y, int z, int width, int height, int depth)
 		{
-			size.set(width, height);
-			position.set(x, y);
+			size.set(width, height, depth);
+			position.set(x, y, z);
 
 		}
-		public Body(Vector2 position, Vector2 size)
+		public Rectangle(Vector3 position, Vector3 size)
 		{
 			this.position.set(position);
 			this.size.set(size);
 		}
-		public static void update(List<Body> bodies, double delta)
+		public static void update(List<Rectangle> bodies, double delta)
 		{
 			for (int i = 0; i < bodies.Count(); i++)
 			{
 				bodies[i].update(delta);
 			}
 		}
-        public Vector2 center()
+        public Vector3 center()
         {
             return (position + size) / 2;
         }

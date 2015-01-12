@@ -15,7 +15,15 @@ namespace WicGames.GameEngine.Entities
 		public int attack;
 		public bool canJump;
 		public bool canAttack;
-		public Body body;
+		public Rectangle body;
+
+		public Entity(int maxHealth, int attack, int defense)
+		{
+			this.attack = attack;
+			this.defense = defense;
+			this.maxHealth = maxHealth;
+		}
+        public Entity(){}
 
 		public void walkLeft()
 		{
@@ -27,16 +35,6 @@ namespace WicGames.GameEngine.Entities
 		{
 		}
 
-		public Entity(Body body, int health, int attack, int defense)
-		{
-			this.health = health;
-			this.attack = attack;
-			this.defense = defense;
-			this.body = body;
-		}
-        public Entity()
-        {
 
-        }
 	}
 }

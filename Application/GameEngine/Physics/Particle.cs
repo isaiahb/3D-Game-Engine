@@ -9,22 +9,22 @@ namespace WicGames.GameEngine.Physics
 {
 	class Particle
 	{
-		public Vector2 position = new Vector2();
-		public Vector2 size = new Vector2(1, 1);
-		public Vector2 velocity = new Vector2();
-		public Vector2 acceleration = new Vector2();
-		public Vector2 force = new Vector2();
+		public Vector3 position = new Vector3();
+		public Vector3 size = new Vector3(1, 1, 1);
+		public Vector3 velocity = new Vector3();
+		public Vector3 acceleration = new Vector3();
+		public Vector3 force = new Vector3();
 		public double mass = 1;
 		public double inverseMass = 1;
 		public double delta = 0;
 		public double time = 0;
 
 		public Particle() {}
-		public Particle(int x, int y)
+		public Particle(int x, int y, int z)
 		{
-			position.set(x, y);
+			position.set(x, y, z);
 		}
-		public Particle(Vector2 vector)
+		public Particle(Vector3 vector)
 		{
 			position.set(vector);//
 		}
@@ -34,32 +34,8 @@ namespace WicGames.GameEngine.Physics
 			mass = m;
 			inverseMass = mass != 0 ? mass : 0;
 		}
-		public void edgeCheck()
-		{
-			if (position.x < 0)
-			{
-				position.x = 0;
-				velocity.x = 0;
-			}
-			if (position.x + size.x > Main.Game.window.size.x)
-			{
-				position.x = Main.Game.window.size.x - size.x;
-				velocity.x = 0;
-			}
-
-
-			if (position.y < 0)
-			{
-				position.y = 0;
-				velocity.y = 0;
-			}
-			if (position.y + size.y > Main.Game.window.size.y)
-			{
-				position.y = Main.Game.window.size.y - size.y;
-				velocity.y = 0;
-			}
-		}
-		public void addForce(Vector2 force)
+	
+		public void addForce(Vector3 force)
 		{
 			this.force += force;
 		}
@@ -72,12 +48,12 @@ namespace WicGames.GameEngine.Physics
 			velocity += acceleration * delta;
 			position += velocity * delta;
 			force.clear();
-			edgeCheck();
+			
 		}
 
 		public void draw(Graphics2D g)
 		{
-			g.fillRect(position, size);
+			g.fillRect(g.toScreen(position), new Vector2(3,3));
 		}
 	}
 }

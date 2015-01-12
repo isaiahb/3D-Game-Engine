@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blob Game", "Blob Game.csproj", "{4F69BF71-170E-4EF8-B949-DD6F1C4E9D69}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3D Game Engine", "3D Game Engine.csproj", "{4F69BF71-170E-4EF8-B949-DD6F1C4E9D69}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

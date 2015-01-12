@@ -17,8 +17,8 @@ namespace WicGames.GameEngine.Physics.Collision
 
 		public static void resolveVelocity(Manifold m, bool friction)
 		{
-			Body a = m.a;
-			Body b = m.b;
+			Rectangle a = m.a;
+			Rectangle b = m.b;
 
 			// Trigger Hit Methods or w/e;
 			/*
@@ -86,8 +86,8 @@ namespace WicGames.GameEngine.Physics.Collision
 
 		public static void resolvePenetration(Manifold m)
 		{
-			Body a = m.a;
-			Body b = m.b;
+			Rectangle a = m.a;
+			Rectangle b = m.b;
 
 			double totalIMass = a.inverseMass + b.inverseMass;
 

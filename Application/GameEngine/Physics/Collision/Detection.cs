@@ -10,10 +10,10 @@ namespace WicGames.GameEngine.Physics.Collision
 	class Detection
 	{
 		//Broad Phase
-		public static void BroadPhase(List<Body> bodies)
+		public static void BroadPhase(List<Rectangle> bodies)
 		{
 			int length = bodies.Count();
-			Body a, b;
+			Rectangle a, b;
 
 			for (int i = 0; i < length; i++)
 			{
@@ -39,10 +39,10 @@ namespace WicGames.GameEngine.Physics.Collision
 
 		//Narrow Phase
 		//Rectangle, Rectangle
-		public static void detect(Body a, Body b)
+		public static void detect(Rectangle a, Rectangle b)
 		{
 
-			Vector2 minA, minB, maxA, maxB;
+			Vector3 minA, minB, maxA, maxB;
 			minA = a.position; maxA = minA + a.size;
 			minB = b.position; maxB = minB + b.size;
 
@@ -54,10 +54,10 @@ namespace WicGames.GameEngine.Physics.Collision
 			Manifold m = new Manifold(a, b);
 			m.restitution = 0.25;
 
-			Vector2 halfExtentsA = a.size / 2;
-			Vector2 halfExtentsB = b.size / 2;
-			Vector2 centerA = a.position + halfExtentsA;
-			Vector2 centerB = b.position + halfExtentsB;
+			Vector3 halfExtentsA = a.size / 2;
+			Vector3 halfExtentsB = b.size / 2;
+			Vector3 centerA = a.position + halfExtentsA;
+			Vector3 centerB = b.position + halfExtentsB;
 
 			double hX = halfExtentsA.x + halfExtentsB.x;
 			double hY = halfExtentsA.y + halfExtentsB.y;

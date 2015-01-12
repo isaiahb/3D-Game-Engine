@@ -14,7 +14,7 @@ namespace WicGames.GameEngine.Physics
         public static Physics currentPhysics;
         public List<Manifold> manifolds = new List<Manifold>();
         public List<Particle> particles = new List<Particle>(); //Holds all the particles and bodies
-        public List<Body> bodies = new List<Body>();
+        public List<Rectangle> bodies = new List<Rectangle>();
         public List<Force> forces = new List<Force>();
         public List<Constraint> constraints = new List<Constraint>();
         public void update(double delta)
@@ -22,7 +22,7 @@ namespace WicGames.GameEngine.Physics
             //Basic update method for physics
             manifolds.Clear();
             //Force.update(forces);
-            Body.update(bodies, delta);
+            Rectangle.update(bodies, delta);
             Constraint.updateConstraints(constraints);
             Force.update(forces);
 
@@ -36,7 +36,7 @@ namespace WicGames.GameEngine.Physics
             {
                 p.draw(g);
             }
-			foreach (Body b in bodies)
+			foreach (Rectangle b in bodies)
 			{
 				b.draw(g);
 			}

@@ -12,7 +12,8 @@ namespace WicGames.GameEngine.Entities
 {
 	class Blob : Entity
 	{
-        private List<Body> points = new List<Body>();
+		/*
+        private List<Rectangle> points = new List<Rectangle>();
         public Blob(int x, int y, Physics.Physics p)
         {
             int radius = 10;
@@ -20,14 +21,14 @@ namespace WicGames.GameEngine.Entities
             for (int xPos = -20; xPos < 20; xPos += 3)
             {
                 int yPos = (int)Math.Sqrt(Math.Pow(radius * 2,2) - Math.Pow(xPos,2));
-                points.Add(new Body(xPos + x, yPos + y, 10, 10));
+                points.Add(new Rectangle(xPos + x, yPos + y, 10, 10));
                 p.bodies.Add(points[i]);
                 i++;
             }
             for (int xPos = 20; xPos > -20; xPos -= 3)
             {
                 int yPos = -(int)Math.Sqrt(Math.Pow(radius * 2, 2) - Math.Pow(xPos, 2));
-                points.Add(new Body(xPos + x, yPos + y, 10, 10));
+                points.Add(new Rectangle(xPos + x, yPos + y, 10, 10));
                 p.bodies.Add(points[i]);
                 i++;
             }
@@ -57,7 +58,7 @@ namespace WicGames.GameEngine.Entities
         }
         public void addForce(Force f)
         {
-            foreach (Body p in points)
+            foreach (Rectangle p in points)
             {
                 f.bodies.Add(p);
             }
@@ -66,12 +67,14 @@ namespace WicGames.GameEngine.Entities
         {
             Point[] pons = new Point[points.Count()];
             int i = 0;
-            foreach (Body p in points)
+            foreach (Rectangle p in points)
             {
                 pons[i] = points[i].position;
                 i++;
             }
             g.graphics.DrawClosedCurve(g.pen, pons);
         }
+		 * 
+		 */
 	}
 }
